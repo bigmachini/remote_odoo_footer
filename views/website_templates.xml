@@ -1,7 +1,11 @@
 <odoo>
     <template id="brand_promotion_custom" inherit_id="web.brand_promotion">
         <xpath expr="//t[@t-call='web.brand_promotion_message']" position="replace">
-            <!-- Content removed -->
+            <t t-set="_message">
+                Powered by
+                <a target="_blank" href="https://bigmachini.net/">Bigmachini Enterprises LTD</a>
+            </t>
+            <t t-set="_utm_medium" t-valuef="website"/>
         </xpath>
     </template>
 </odoo>
